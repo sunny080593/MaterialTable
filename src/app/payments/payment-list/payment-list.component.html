@@ -1,0 +1,42 @@
+<div class="mat-elevation-z8">
+        <mat-table [dataSource]="listData" matSort>
+            <ng-container matColumnDef='paymentId'>
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+                <mat-cell *matCellDef="let item"  data-label="Id">{{item.paymentId}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef='paymentUniqueId'>
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Unique Id</mat-header-cell>
+                <mat-cell *matCellDef="let item"  data-label="Unique Id">{{item.paymentUniqueId}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef='paymentAmount'>
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Amount</mat-header-cell>
+                <mat-cell *matCellDef="let item" data-label="Amount">{{item.paymentAmount}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef='paymentType'>
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Type</mat-header-cell>
+                <mat-cell *matCellDef="let item" data-label="Type">{{item.paymentType}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef='actions'>
+                <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                <mat-cell *matCellDef="let item">
+                    <button mat-icon-button><mat-icon>launch</mat-icon></button>
+                    <button mat-icon-button color="warn"><mat-icon>launch</mat-icon></button>
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef='loading'>
+                <mat-footer-cell *matFooterCellDef colspan="6">
+                    Loading....
+                </mat-footer-cell>
+            </ng-container>
+            <ng-container matColumnDef='noData'>
+                <mat-footer-cell *matFooterCellDef colspan="6">
+                    No Data
+                </mat-footer-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>
+            <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData !=null}"></mat-footer-row>
+            <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(listData !=null && listData.data.length == 0)}"></mat-footer-row>
+        </mat-table>
+        <mat-paginator [pageSizeOptions]="[5,10,15,25]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+</div>

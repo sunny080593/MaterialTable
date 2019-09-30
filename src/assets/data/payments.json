@@ -1,0 +1,14 @@
+[
+    {"paymentId":"1"}
+    ,{"paymentId":"2","paymentUniqueId":"C625672156323","paymentType":"NEFT", "paymentAmount":"1093.52"}
+    ,{"paymentId":"3","paymentUniqueId":"C625672156343","paymentType":"ONUS", "paymentAmount":"1063.62"}
+    ,{"paymentId":"4","paymentUniqueId":"C625672156344","paymentType":"APBS", "paymentAmount":"2033.14"}
+    ,{"paymentId":"5","paymentUniqueId":"C625672156345","paymentType":"RTGS", "paymentAmount":"1093.12"}
+    ,{"paymentId":"6","paymentUniqueId":"C625672156346","paymentType":"NACH", "paymentAmount":"4043.82"}
+    ,{"paymentId":"1"}
+    ,{"paymentId":"2","paymentUniqueId":"C625672156323","paymentType":"NEFT", "paymentAmount":"1093.52"}
+    ,{"paymentId":"3","paymentUniqueId":"C625672156343","paymentType":"ONUS", "paymentAmount":"1063.62"}
+    ,{"paymentId":"4","paymentUniqueId":"C625672156344","paymentType":"APBS", "paymentAmount":"2033.14"}
+    ,{"paymentId":"5","paymentUniqueId":"C625672156345","paymentType":"RTGS", "paymentAmount":"1093.12"}
+    ,{"paymentId":"6","paymentUniqueId":"C625672156346","paymentType":"NACH", "paymentAmount":"4043.82"}
+]
